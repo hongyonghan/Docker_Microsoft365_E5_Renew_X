@@ -47,10 +47,10 @@
    定制版：
 
    ```
-   docker run -d -p 1066:1066 -v Deploy:/app/Deploy --name e5 hanhongyong/ms365-e5-renew-x:latest
+   docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_E5_Renew_X/Deploy:/app/Deploy  hanhongyong/ms365-e5-renew-x:latest
    ```
 
-   其中-p为暴露服务器的端口（前面的1066）和暴露容器的端口（后面的1066）；-v为数据卷的挂载，前面的Deploy指的是服务器中的Deploy文件夹（可以修改），/app/Deploy指的是容器内的文件夹（不能修改）；--name为容器的名字。
+   其中-p为暴露服务器的端口（前面的1066，可以自行修改）和暴露容器的端口（后面的1066，可以自行修改，这个端口是在Config.xml中指定的开放的端口）；-v为数据卷的挂载，前面的Deploy指的是服务器中的Deploy文件夹（可以修改，但是必须是绝对路径），/app/Deploy指的是容器内的文件夹（不能修改）；--name为容器的名字。
 
 4. 服务访问：输入ip:1066.
 
