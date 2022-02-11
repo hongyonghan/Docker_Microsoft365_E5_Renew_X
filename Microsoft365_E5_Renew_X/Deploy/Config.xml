@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+	<!--站点服务器基本配置-->
+	<Serivce>
+		<!--服务访问端口-->
+		<Port>1066</Port>
+		<!--管理员密码(管理员登录路由/Admin/Login) 重要：首次启动前必须更改-->
+		<LoginPassword>123456</LoginPassword>
+		<!--是否启用内核多线程支持-->
+		<CoreMultiThread>true</CoreMultiThread>
+		<!--网站备案号（选填）-->
+		<ICP></ICP>
+		<!--备案管理查询机构跳转链接（选填）-->
+		<ICPLink>https://beian.miit.gov.cn</ICPLink>
+	</Serivce>
+	<!--站点Kestrel服务器HTTPS配置 （只支持IIS证书类型 即PFX格式的证书）-->
+	<HTTPS>
+		<!--Kestrel是否启用HTTPS(SSL加密传输)-->
+		<Enable>false</Enable>
+		<!--SSL证书文件名 (需要将PFX格式的SSL证书放置于该配置文件的同级目录Deploy文件夹下) 如e5.sundayrx.net.pfx-->
+		<!--不填则默认使用Dev localhost 本地证书-->
+		<Certificate></Certificate>
+		<!--SSL证书密钥(PFX证书的访问密钥)-->
+		<Password></Password>
+	</HTTPS>
+	<!--共享站点配置,不共享可无视以下内容 (若要共享站点 请自备以下所需的配置信息 且配置中HTTPS必须启用)-->
+	<ShareSite>
+		<!--是否启用站点共享-->
+		<Enable>false</Enable>
+		<!--SMTP邮件发送支持-->
+		<SMTP>
+			<!--发件邮箱-->
+			<Email></Email>
+			<!--邮箱密钥-->
+			<Password></Password>
+			<!--SMTP服务器地址-->
+			<Host>smtp.163.com</Host>
+		</SMTP>
+		<!--第三方OAuth登录支持(至少启用以下一种OAuth否则其他用户无法注册)-->
+		<OAuth>
+			<!--微软登录授权-->
+			<Microsoft>
+				<!--是否启用该OAuth-->
+				<Enable>false</Enable>
+				<!--应用程序Id-->
+				<ClientId></ClientId>
+				<!--应用程序访问机密-->
+				<ClientSecret></ClientSecret>
+			</Microsoft>
+			<!--GitHub登录授权-->
+			<Github>
+				<!--是否启用该OAuth-->
+				<Enable>false</Enable>
+				<!--应用程序Id-->
+				<ClientId></ClientId>
+				<!--应用程序访问机密-->
+				<ClientSecret></ClientSecret>
+			</Github>
+		</OAuth>
+		<!--站点系统设置-->
+		<System>
+			<!--站点启动后默认是否允许用户注册 建议为false-->
+			<AllowRegister>false</AllowRegister>
+			<!--站点启动后默认公告（换行符请使用 &#x000D;&#x000A; 进行换行）-->
+			<Notice></Notice>
+			<!--站点运营者-->
+			<Master></Master>
+			<!--站点运营者推广链接-->
+			<MasterLink></MasterLink>
+			<!--站点新用户默认配额数-->
+			<DefaultQuota>1</DefaultQuota>
+			<!--站点自动特赦时间间隔 （单位：天 至少30天）-->
+			<AutoSpecialPardonInterval>30</AutoSpecialPardonInterval>
+		</System>
+	</ShareSite>
+</Configuration>
