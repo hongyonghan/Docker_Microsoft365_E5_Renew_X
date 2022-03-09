@@ -63,6 +63,11 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
 
 ![image-20220211205438949](README.assets/image-20220211205438949.png)
 
+**ARM64版本镜像**
+   ```
+   docker pull hanhongyong/ms365-e5-renew-x:arm
+   ```
+
 **开发相关的命令（与部署无关）：**
 
 ```
