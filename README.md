@@ -74,6 +74,8 @@ docker tag ms365-e5-renew-x:latest hanhongyong/ms365-e5-renew-x:latest
 docker push hanhongyong/ms365-e5-renew-x:latest
 #登录dockerhub
 docker login
+#使用buildx编译arm架构的镜像
+docker buildx build --push --tag hanhongyong/ms365-e5-renew-x:arm --platform linux/arm64/v8 -f Dockerfile_arm .
 ```
 
 **制作不易，欢迎Star!!!**
