@@ -69,6 +69,11 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
    ```
    docker pull hanhongyong/ms365-e5-renew-x:arm
    ```
+   
+**Serverless部署**
+
+Serverless部署:感谢[gd1214b](https://github.com/hongyonghan/Docker_Microsoft365_E5_Renew_X/issues/5)提出的解决方案。
+具体见文件: [ReadMe_Serverless.md](./ReadMe_Serverless.md) 
 
 **开发相关的命令（与部署无关）：**
 
