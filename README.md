@@ -38,7 +38,7 @@
 
 3. 进入MS365 E5 Renew X文件夹下，运行MS365 E5 Renew X镜像，得到容器。
 
-   简单版：
+   简单版（如果是新手，部署只是为了自己使用就运行下面这个命令就行了，不用管下面的定制版，然后进入容器，Deploy的Config.xml进行修改密码即可。）：
 
    ```
    docker run -d -p 1066:1066  hanhongyong/ms365-e5-renew-x:latest
@@ -46,7 +46,7 @@
 
    默认管理员密码为：123456
 
-   定制版：
+   定制版（定制版为高级操作，主要是为了高级用户分享自己的站点给别人、方便迁移等操作。小白无需使用。）：
 
    ```
    docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_E5_Renew_X/Deploy:/app/Deploy  hanhongyong/ms365-e5-renew-x:latest
