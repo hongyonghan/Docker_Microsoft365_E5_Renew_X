@@ -10,6 +10,6 @@
    6.稍等几分钟即可完成部署，点击这里打开应用：
    [![image](https://user-images.githubusercontent.com/37929478/158352534-87a3a30b-4275-4d57-b87c-dded046a2a1d.png)](https://user-images.githubusercontent.com/37929478/158352534-87a3a30b-4275-4d57-b87c-dded046a2a1d.png)
 5. 输入默认密码`123456`完成登陆：
-   [![image](ReadMe_Serverless.assets/158352720-5b435753-2015-4a5a-918a-7284194943c9.png)](https://user-images.githubusercontent.com/37929478/158352720-5b435753-2015-4a5a-918a-7284194943c9.png)
+   [![image](https://user-images.githubusercontent.com/37929478/158352720-5b435753-2015-4a5a-918a-7284194943c9.png)](https://user-images.githubusercontent.com/37929478/158352720-5b435753-2015-4a5a-918a-7284194943c9.png)
 
 demo：https://web-renew-gd1214b.koyeb.app/
