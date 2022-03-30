@@ -80,6 +80,9 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
    
 **Serverless部署**
 
+点击下面按钮一键部署:
+> [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=docker&image=docker.io/hanhongyong/ms365-e5-renew-x&name=web-renew&ports=1066;http;/)
+
 Serverless部署:感谢[gd1214b](https://github.com/hongyonghan/Docker_Microsoft365_E5_Renew_X/issues/5)提出的解决方案。
 具体见文件: [ReadMe_Serverless.md](./ReadMe_Serverless.md) 
 
