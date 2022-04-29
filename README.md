@@ -24,9 +24,9 @@
 - 史上最全Docker环境安装指南：https://zhuanlan.zhihu.com/p/82269806
 
 **为了使得容器更加稳定且好用（小白专用），latest版本中添加了vim等软件，并且更换了基础镜像，会有点大。如果介意，请使用slim版本**
-     ```
+   ```
    docker pull hanhongyong/ms365-e5-renew-x:slim
-     ```
+   ```
    下面部署命令时版本也改为slim版本即可。slim版本仅为225M。
    建议使用latest版本，这个版本持续修改完善下去，slim版本仅为资源受限的主机使用。
 
