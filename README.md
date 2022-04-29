@@ -24,37 +24,54 @@
 - 史上最全Docker环境安装指南：https://zhuanlan.zhihu.com/p/82269806
 
 **为了使得容器更加稳定且好用（小白专用），latest版本中添加了vim等软件，并且更换了基础镜像，会有点大。如果介意，请使用slim版本**
-  ```
+   ```
    docker pull hanhongyong/ms365-e5-renew-x:slim
    ```
    下面部署命令时版本也改为slim版本即可。slim版本仅为225M。
+   建议使用latest版本，这个版本持续修改完善下去，slim版本仅为资源受限的主机使用。
 
 
 **部署步骤**
 
-1. 上传项目到服务器，只上传Deploy文件夹也可。
 
-   ![image-20220211200612044](README.assets/image-20220211200612044.png)
-
-2. 安装Docker环境后，下载MS365 E5 Renew X镜像。
+1. 安装Docker环境后，下载MS365 E5 Renew X镜像。
 
    ![image-20220211202818966](README.assets/image-20220211202818966.png)
 
    ```
-   docker pull hanhongyong/ms365-e5-renew-x
+   docker pull hanhongyong/ms365-e5-renew-x:latest
    ```
 
-3. 进入MS365 E5 Renew X文件夹下，运行MS365 E5 Renew X镜像，得到容器。
+2. 运行MS365 E5 Renew X镜像，得到容器。
 
-   简单版（如果是新手，部署只是为了自己使用就运行下面这个命令就行了，不用管下面的定制版，然后进入容器，Deploy的Config.xml进行修改密码即可。）：
 
    ```
-   docker run -d -p 1066:1066  hanhongyong/ms365-e5-renew-x:latest
+   docker run -d -p 1066:1066 -e TZ=Asia/Shanghai --name ms365  hanhongyong/ms365-e5-renew-x:latest
    ```
 
    默认管理员密码为：123456
+3. 进入容器内部，修改登录密码。
+   进入容器命令：
+   ```
+   docker exec -it ms365 /bin/bash
+   ```
+   进入Deploy文件夹：
+   ```
+   cd Deploy
+   ```
+   修改密码：
+   ```
+   vim Config.xml
+   ```
+   键盘敲入i键，移动上下左右光标，将123456修改为你想修改的密码。键盘敲入esc键，退出编辑模式，输入:wq!键退出编辑模式。
+   
+4. 服务访问：输入ip:1066.
 
-   定制版（定制版为高级操作，主要是为了高级用户分享自己的站点给别人、方便迁移等操作。小白无需使用。）：
+![image-20220211205438949](README.assets/image-20220211205438949.png)
+
+5. 以上就完成了部署。
+
+定制版（定制版为高级操作，主要是为了高级用户分享自己的站点给别人、方便迁移等操作。小白无需使用。）：
 
    ```
    docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_E5_Renew_X/Deploy:/app/Deploy  hanhongyong/ms365-e5-renew-x:latest
@@ -69,10 +86,6 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
 
   
 
-4. 服务访问：输入ip:1066.
-
-![image-20220211205438949](README.assets/image-20220211205438949.png)
-
 **ARM64版本镜像**
    ```
    docker pull hanhongyong/ms365-e5-renew-x:arm
@@ -80,10 +93,10 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
    
 **Serverless部署**
 
-点击下面按钮一键部署:
+没有服务器的同学们，可以使用koyeb进行部署。点击下面按钮一键部署:
 > [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=docker&image=docker.io/hanhongyong/ms365-e5-renew-x&name=web-renew&ports=1066;http;/)
 
-Serverless部署:感谢[gd1214b](https://github.com/hongyonghan/Docker_Microsoft365_E5_Renew_X/issues/5)提出的解决方案。
+koyeb部署:感谢[gd1214b](https://github.com/hongyonghan/Docker_Microsoft365_E5_Renew_X/issues/5)提出的解决方案。
 具体见文件: [ReadMe_Serverless.md](./ReadMe_Serverless.md) 
 
 **开发相关的命令（与部署无关）：**
