@@ -90,6 +90,9 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
    ```
    docker pull hanhongyong/ms365-e5-renew-x:arm
    ```
+   ```
+   docker run -d -p 1066:1066 -e TZ=Asia/Shanghai --name ms365  hanhongyong/ms365-e5-renew-x:arm
+   ```
    
 **Serverless部署**
 
