@@ -103,7 +103,7 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
 
 koyeb部署:感谢[gd1214b](https://github.com/hongyonghan/Docker_Microsoft365_E5_Renew_X/issues/5)提出的解决方案。
 具体见文件: [ReadMe_Serverless.md](./ReadMe_Serverless.md) 
-
+注意：类似于heroku和koyeb等云容器平台，都会有重启实例的现象，不过heroku是每天强制重启，koyeb是隔几天重启一次。每次重启都会丢失实例在部署后的所有更改，造成数据丢失。请大家注意。感谢[ChirmyRam](https://github.com/hongyonghan/Docker_Microsoft365_E5_Renew_X/issues/15)给出的提醒。
 **开发相关的命令（与部署无关）：**
 
 ```
