@@ -73,7 +73,7 @@
 
 
 <details>
-<summary><h3> 定制版（定制版为高级操作，主要是为了高级用户分享自己的站点给别人、方便迁移等操作。小白无需使用。）</h3></summary>
+<summary><h3> 定制版（高级操作，主要是为了高级用户分享自己的站点给别人等操作。小白无需使用。）</h3></summary>
 
    ```
    docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_E5_Renew_X/Deploy:/app/Deploy  hanhongyong/ms365-e5-renew-x:latest
