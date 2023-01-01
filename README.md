@@ -23,6 +23,7 @@
  <details>
 <summary><h3> 一些Docker环境安装的教程</h3></summary>
    - Docker环境搭建：https://www.jianshu.com/p/996e08b7976d
+   
    - 史上最全Docker环境安装指南：https://zhuanlan.zhihu.com/p/82269806
  </details>
 
@@ -35,8 +36,9 @@
    建议使用latest版本，这个版本持续修改完善下去，slim版本仅为资源受限的主机使用。
 
 
-**部署步骤**
 
+<details>
+<summary><h3> 部署步骤</h3></summary>
 
 1. 安装Docker环境后，下载MS365 E5 Renew X镜像。
 
@@ -73,7 +75,7 @@
 
 ![image-20220211205438949](README.assets/image-20220211205438949.png)
 
-5. 以上就完成了部署。
+</details>
 <details>
 <summary><h3> 定制版（定制版为高级操作，主要是为了高级用户分享自己的站点给别人、方便迁移等操作。小白无需使用。）</h3></summary>
 
