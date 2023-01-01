@@ -81,7 +81,14 @@
   
   其中-p为暴露服务器的端口（前面的1066，可以自行修改）和暴露容器的端口（后面的1066，可以自行修改，这个端口是在Config.xml中指定的开放的端口）；-v为数据卷的挂载，前面的Deploy指的是服务器中的Deploy文件夹（可以修改，但是必须是绝对路径），/app/Deploy指的是容器内的文件夹（不能修改）；--name为容器的名字。
  </details>
+ 
  <details>
+<summary><h3> 监控网站运行（推荐部署）</h3></summary>
+   [见文档](https://github.com/hongyonghan/Docker_Microsoft365_E5_Renew_X/blob/main/monitoring_service.md)
+ </details>
+<details>
+ 
+<details>
 <summary> <h3>备份和迁移：</h3></summary>
  
   
@@ -91,7 +98,7 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
   ```
   如此便可以实现您所要求的配置文件备份的功能，且您的容器中的文件和服务器主机中文件是一样的。
 
-  
+  </details>
 
 <details>
 <summary><h3>ARM64版本镜像</h3></summary>
