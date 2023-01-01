@@ -26,17 +26,6 @@
    
    - 史上最全Docker环境安装指南：https://zhuanlan.zhihu.com/p/82269806
  </details>
-
-
-**为了使得容器更加稳定且好用（小白专用），latest版本中添加了vim等软件，并且更换了基础镜像，会有点大。如果介意，请使用slim版本**
-   ```
-   docker pull hanhongyong/ms365-e5-renew-x:slim
-   ```
-   下面部署命令时版本也改为slim版本即可。slim版本仅为225M。
-   建议使用latest版本，这个版本持续修改完善下去，slim版本仅为资源受限的主机使用。
-
-
-
 <details>
 <summary><h3> 部署步骤</h3></summary>
 
@@ -76,6 +65,13 @@
 ![image-20220211205438949](README.assets/image-20220211205438949.png)
 
 </details>
+
+ <details>
+<summary><h3> 监控网站运行（推荐部署）</h3></summary>
+   [见文档](https://github.com/hongyonghan/Docker_Microsoft365_E5_Renew_X/blob/main/monitoring_service.md/)
+ </details>
+
+
 <details>
 <summary><h3> 定制版（定制版为高级操作，主要是为了高级用户分享自己的站点给别人、方便迁移等操作。小白无需使用。）</h3></summary>
 
@@ -86,10 +82,6 @@
   其中-p为暴露服务器的端口（前面的1066，可以自行修改）和暴露容器的端口（后面的1066，可以自行修改，这个端口是在Config.xml中指定的开放的端口）；-v为数据卷的挂载，前面的Deploy指的是服务器中的Deploy文件夹（可以修改，但是必须是绝对路径），/app/Deploy指的是容器内的文件夹（不能修改）；--name为容器的名字。
  </details>
  
- <details>
-<summary><h3> 监控网站运行（推荐部署）</h3></summary>
-   [见文档](https://github.com/hongyonghan/Docker_Microsoft365_E5_Renew_X/blob/main/monitoring_service.md/)
- </details>
 
  
 <details>
@@ -103,6 +95,17 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
   如此便可以实现您所要求的配置文件备份的功能，且您的容器中的文件和服务器主机中文件是一样的。
 
   </details>
+ <details>
+<summary><h3> 轻量化镜像版本</h3></summary>
+ 
+ **为了使得容器更加稳定且好用（小白专用），latest版本中添加了vim等软件，并且更换了基础镜像，会有点大。如果介意，请使用slim版本**
+   ```
+   docker pull hanhongyong/ms365-e5-renew-x:slim
+   ```
+   下面部署命令时版本也改为slim版本即可。slim版本仅为225M。
+   建议使用latest版本，这个版本持续修改完善下去，slim版本仅为资源受限的主机使用。
+
+ </details>
 
 <details>
 <summary><h3>ARM64版本镜像</h3></summary>
