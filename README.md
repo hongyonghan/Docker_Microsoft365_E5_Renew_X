@@ -7,6 +7,8 @@
 基础的账号注册等过程见SundayRX的博客：https://blog.csdn.net/qq_33212020/article/details/119747634
 
 **本文主要是让小白轻松部署自己的E5续订服务。**
+** 交流群 ** 
+https://t.me/ms365e5
 
 **优点：**
 
