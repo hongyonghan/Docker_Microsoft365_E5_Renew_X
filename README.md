@@ -23,6 +23,7 @@ https://t.me/ms365e5
 - 有一个服务器/群晖NAS等。
 
 
+
  <details>
 <summary><h3> 一些Docker环境安装的教程</h3></summary>
  
@@ -31,6 +32,8 @@ https://t.me/ms365e5
    - 史上最全Docker环境安装指南：https://zhuanlan.zhihu.com/p/82269806
  </details>
 <details>
+测试地址：[地址链接](http://hanhongyong.eu.org:1066/Admin/Login?ReturnUrl=%2F)
+测试密码：HanHongYong123456HHY
 <summary><h3> 部署步骤</h3></summary>
 
 1. 安装Docker环境后，下载MS365 E5 Renew X镜像。
