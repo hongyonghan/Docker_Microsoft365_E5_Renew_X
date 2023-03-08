@@ -4,7 +4,7 @@
 
 基础的账号注册等过程见SundayRX的博客：https://blog.csdn.net/qq_33212020/article/details/119747634
 
-**本文主要是让小白轻松部署自己的E5续订服务。**
+
 **本项目主要为学习Dockerfile和Docker的部署使用，禁止将此项目进行商业化，仅推荐学习使用。**
 
 ** 交流群 ** 
