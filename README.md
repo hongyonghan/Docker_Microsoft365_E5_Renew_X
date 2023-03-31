@@ -34,7 +34,7 @@ https://t.me/ms365e5
 测试地址：[地址链接](http://hanhongyong.eu.org:1066/Admin/Login?ReturnUrl=%2F)
 测试密码：HanHongYong123456HHY
 
-<details>
+</details>
 <details>
 <summary><h3>Email通知版本</h3></summary>
  
