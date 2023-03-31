@@ -30,30 +30,9 @@ https://t.me/ms365e5
    
    - 史上最全Docker环境安装指南：https://zhuanlan.zhihu.com/p/82269806
  </details>
-<details>
-<summary><h3>Email通知版本</h3></summary>
- 
-   - email通知版本主要实现了检测部署的账号是否全部都正常运行。该版本会每天定时发送邮件来通知是否账号全部运行。
-   
-   - 该版本内测使用了一个月，目前没发现什么太大的问题。
-   
-   - 关于修改通知邮箱。推荐使用163邮箱。进入容器，进入/app文件夹，修改SendMailpy2.py文件，修改 sender = '123456@163.com'为发送邮件的邮箱。
-   修改receiver = '789456@qq.com'为接收邮件的邮箱。其中pwd为发送邮箱的授权码。获取方式为，进入网页版163邮箱，点击设置，点击POP3/SMTP/IMAP，点击授权密码管理，新增授权码即可。
-   
-   - 关于版本。将会发布x86机器和arm64v8，其他版本需要可以发issue，会尽快补充。
-   
-   - x86版本：
-    ```
-   docker pull hanhongyong/ms365email:latest
-    ```
-   - arm64v8版本：
-    ```
-   docker pull hanhongyong/ms365email:arm64v8
-    ```
-   
- </details>
 
 <details>
+
 <summary><h3> 部署步骤</h3></summary>
 
 1. 安装Docker环境后，下载MS365 E5 Renew X镜像。
@@ -92,6 +71,29 @@ https://t.me/ms365e5
 ![image-20220211205438949](README.assets/image-20220211205438949.png)
 
 </details>
+
+<details>
+<summary><h3>Email通知功能</h3></summary>
+ 
+   - email通知版本主要实现了检测部署的账号是否全部都正常运行。该版本会每天定时发送邮件来通知是否账号全部运行。
+   
+   - 该版本内测使用了一个月，目前没发现什么太大的问题。
+   
+   - 关于修改通知邮箱。推荐使用163邮箱。进入容器，进入/app文件夹，修改SendMailpy2.py文件，修改 sender = '123456@163.com'为发送邮件的邮箱。
+   修改receiver = '789456@qq.com'为接收邮件的邮箱。其中pwd为发送邮箱的授权码。获取方式为，进入网页版163邮箱，点击设置，点击POP3/SMTP/IMAP，点击授权密码管理，新增授权码即可。
+   
+   - 关于版本。将会发布x86机器和arm64v8，其他版本需要可以发issue，会尽快补充。
+   
+   - x86版本：
+    ```
+   docker pull hanhongyong/ms365email:latest
+    ```
+   - arm64v8版本：
+    ```
+   docker pull hanhongyong/ms365email:arm64v8
+    ```
+   
+ </details>
 
  <details>
 <summary><h3> 监控网站运行（推荐部署）</h3></summary>
