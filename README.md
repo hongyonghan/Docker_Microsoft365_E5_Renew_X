@@ -26,7 +26,7 @@ https://t.me/ms365e5
 
  <details>
 <summary><h3> 一些Docker环境安装的教程</h3></summary>
- 
+
    - Docker环境搭建：https://www.jianshu.com/p/996e08b7976d
    
    - 史上最全Docker环境安装指南：https://zhuanlan.zhihu.com/p/82269806
@@ -75,27 +75,29 @@ https://t.me/ms365e5
 
 <details>
 <summary><h3>Email通知功能</h3></summary>
- 
+
    - email通知版本主要实现了检测部署的账号是否全部都正常运行。该版本会每天定时发送邮件来通知是否账号全部运行。
    
    - 该版本内测使用了一个月，目前没发现什么太大的问题。
    
    - 关于修改通知邮箱。推荐使用163邮箱。进入容器，进入/app文件夹，修改SendMailpy2.py文件，修改 sender = '123456@163.com'为发送邮件的邮箱。
-   修改receiver = '789456@qq.com'为接收邮件的邮箱。其中pwd为发送邮箱的授权码。获取方式为，进入网页版163邮箱，点击设置，点击POP3/SMTP/IMAP，点击授权密码管理，新增授权码即可。
+      修改receiver = '789456@qq.com'为接收邮件的邮箱。其中pwd为发送邮箱的授权码。获取方式为，进入网页版163邮箱，点击设置，点击POP3/SMTP/IMAP，点击授权密码管理，新增授权码即可。
    
    - 关于版本。已发布x86机器和arm64v8，其他版本需要可以发issue，会尽快补充。
    - 发送邮件的日志的位置:/opt/test.log
    - 发送邮件的时间为每天18点。可以通过crontab命令修改。
    
    - x86版本：
+
     ```
    docker push hanhongyong/ms365-e5-renew-x:latest
     ```
    - arm64v8版本：
+
     ```
    docker push hanhongyong/ms365-e5-renew-x:arm64v8
     ```
-   
+
  </details>
 
  <details>
@@ -110,16 +112,16 @@ https://t.me/ms365e5
    ```
    docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_E5_Renew_X/Deploy:/app/Deploy  hanhongyong/ms365-e5-renew-x:latest
    ```
-  
+
   其中-p为暴露服务器的端口（前面的1066，可以自行修改）和暴露容器的端口（后面的1066，可以自行修改，这个端口是在Config.xml中指定的开放的端口）；-v为数据卷的挂载，前面的Deploy指的是服务器中的Deploy文件夹（可以修改，但是必须是绝对路径），/app/Deploy指的是容器内的文件夹（不能修改）；--name为容器的名字。
  </details>
- 
 
- 
+
+
 <details>
 <summary> <h3>备份和迁移：</h3></summary>
  
-  
+
   所有的配置文件都放在/app文件路径下，如果您以后有迁移的需要可以用命令将容器中/app路径下的文件复制出来。或者在一开始的时候就可以挂载数据卷到您的之前的全部文件中。如：
   ```
 docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_E5_Renew_X/:/app/ hanhongyong/ms365-e5-renew-x:latest
@@ -129,7 +131,7 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
   </details>
  <details>
 <summary><h3> 轻量化镜像版本</h3></summary>
- 
+
  **为了使得容器更加稳定且好用（小白专用），latest版本中添加了vim等软件，并且更换了基础镜像，会有点大。如果介意，请使用slim版本**
    ```
    docker pull hanhongyong/ms365-e5-renew-x:slim
@@ -149,7 +151,7 @@ docker run -d -p 1066:1066 -v /root/Docker_Microsoft365_E5_Renew_X/Microsoft365_
    docker run -d -p 1066:1066 -e TZ=Asia/Shanghai --name ms365  hanhongyong/ms365-e5-renew-x:arm
    ```
  </details>
- 
+
 <details>
 <summary><h3>Serverless部署</h3></summary>
 
@@ -182,6 +184,18 @@ docker buildx build --push --tag hanhongyong/ms365-e5-renew-x:arm --platform lin
 ```
 
 </details>
+
+### 赞助我
+
+项目会持续更新，大家有啥问题可以发issue。如果可以的话，欢迎大家赞助一元钱。
+
+![image-20220211205438949](README.assets/zhifubao.jpg)
+
+
+
+### Starchart
+
+![Star History Chart](https://api.star-history.com/svg?repos=hongyonghan/Docker_Microsoft365_E5_Renew_X&type=Date)
 
 **制作不易，欢迎Star!!!**
 
