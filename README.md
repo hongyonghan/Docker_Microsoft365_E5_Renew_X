@@ -90,9 +90,7 @@ https://t.me/ms365e5
    - x86版本：
 
     ```
-    
     docker run -d -p 1076:1066 -e TZ=Asia/Shanghai -e sender="byxxx@163.com" -e pwd="UxxxxWWN" -e receiver="41xxxxx@qq.com" hanhongyong/ms365-e5-renew-x:pubemail
-   
     ```
    - arm64v8版本：
 
