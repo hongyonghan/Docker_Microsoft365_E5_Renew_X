@@ -80,8 +80,8 @@ https://t.me/ms365e5
    
    - 该版本内测使用了一个月，目前没发现什么太大的问题。
    
-   - 关于修改通知邮箱。推荐使用163邮箱。进入容器，进入/app文件夹，修改SendMailpy2.py文件，修改 sender = '123456@163.com'为发送邮件的邮箱。
-      修改receiver = '789456@qq.com'为接收邮件的邮箱。其中pwd为发送邮箱的授权码。获取方式为，进入网页版163邮箱，点击设置，点击POP3/SMTP/IMAP，点击授权密码管理，新增授权码即可。
+   - 关于修改通知邮箱。推荐使用163邮箱。修改-e后面的内容，其中 sender = '123456@163.com'为发送邮件的邮箱。
+      receiver = '789456@qq.com'为接收邮件的邮箱。其中pwd为发送邮箱的授权码。授权码获取方式为，进入网页版163邮箱，点击设置，点击POP3/SMTP/IMAP，点击授权密码管理，新增授权码即可。
    
    - 关于版本。已发布x86机器和arm64v8，其他版本需要可以发issue，会尽快补充。
    - 发送邮件的日志的位置:/opt/test.log
@@ -90,7 +90,7 @@ https://t.me/ms365e5
    - x86版本：
 
     
-    docker run -d -p 1076:1066 -e TZ=Asia/Shanghai -e sender="byxxx@163.com" -e pwd="UxxxxWWN" -e receiver="41xxxxx@qq.com" hanhongyong/ms365-e5-renew-x:pubemail
+    docker run -d -p 1066:1066 -e TZ=Asia/Shanghai -e sender="byxxx@163.com" -e pwd="UxxxxWWN" -e receiver="41xxxxx@qq.com" hanhongyong/ms365-e5-renew-x:pubemail
     
    - arm64v8版本：
 
