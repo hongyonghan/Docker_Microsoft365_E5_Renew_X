@@ -62,7 +62,7 @@ https://t.me/ms365e5
 </details>
 
 <details>
-<summary><h3>Email通知功能</h3></summary>
+<summary><h3>Email通知功能(推荐)</h3></summary>
 
    - email通知版本主要实现了检测部署的账号是否全部都正常运行。该版本会每天定时发送邮件来通知是否账号全部运行。
    
@@ -84,7 +84,7 @@ https://t.me/ms365e5
    - arm64v8版本：
 
     
-    docker run -d -p 1066:1066 -e TZ=Asia/Shanghai -e sender="byxxx@163.com" -e pwd="UxxxxWWN" -e receiver="41xxxxx@qq.com" hanhongyong/ms365-e5-renew-x:arm64v8
+    docker run -d -p 1066:1066 -e TZ=Asia/Shanghai -e sender="byxxx@163.com" -e pwd="UxxxxWWN" -e receiver="41xxxxx@qq.com" -e adminpwd="123456" hanhongyong/ms365-e5-renew-x:arm64v8
     
 
  </details>
