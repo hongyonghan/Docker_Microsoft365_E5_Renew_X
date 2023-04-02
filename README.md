@@ -48,26 +48,14 @@ https://t.me/ms365e5
 
 
    ```
-   docker run -d -p 1066:1066 -e TZ=Asia/Shanghai --name ms365  hanhongyong/ms365-e5-renew-x:latest
+   docker run -d -p 1066:1066 -e TZ=Asia/Shanghai -e sender="by123@163.com" -e pwd="UNxxxxxxxxN" -e receiver="4dddqqq9dd6@qq.com"  -e adminpwd="123456" hanhongyong/ms365-e5-renew-x:pubemail
    ```
 
-   默认管理员密码为：123456
-3. 进入容器内部，修改登录密码。
-   进入容器命令：
-   ```
-   docker exec -it ms365 /bin/bash
-   ```
-   进入Deploy文件夹：
-   ```
-   cd Deploy
-   ```
-   修改密码：
-   ```
-   vim Config.xml
-   ```
-   键盘敲入i键，移动上下左右光标，将123456修改为你想修改的密码。键盘敲入esc键，退出编辑模式，输入:wq!键退出编辑模式。
+   修改-e后面的内容，其中 sender = '123456@163.com'为发送邮件的邮箱。
+      receiver = '789456@qq.com'为接收邮件的邮箱。其中pwd为发送邮箱的授权码。授权码获取方式为，进入网页版163邮箱，点击设置，点击POP3/SMTP/IMAP，点击授权密码管理，新增授权码即可。
+      adminpwd为web界面的登录密码。
    
-4. 服务访问：输入ip:1066.
+3. 服务访问：输入ip:1066.
 
 ![image-20220211205438949](README.assets/image-20220211205438949.png)
 
@@ -82,6 +70,7 @@ https://t.me/ms365e5
    
    - 关于修改通知邮箱。推荐使用163邮箱。修改-e后面的内容，其中 sender = '123456@163.com'为发送邮件的邮箱。
       receiver = '789456@qq.com'为接收邮件的邮箱。其中pwd为发送邮箱的授权码。授权码获取方式为，进入网页版163邮箱，点击设置，点击POP3/SMTP/IMAP，点击授权密码管理，新增授权码即可。
+      adminpwd为web界面的登录密码。
    
    - 关于版本。已发布x86机器和arm64v8，其他版本需要可以发issue，会尽快补充。
    - 发送邮件的日志的位置:/opt/test.log
@@ -90,7 +79,7 @@ https://t.me/ms365e5
    - x86版本：
 
     
-    docker run -d -p 1066:1066 -e TZ=Asia/Shanghai -e sender="byxxx@163.com" -e pwd="UxxxxWWN" -e receiver="41xxxxx@qq.com" hanhongyong/ms365-e5-renew-x:pubemail
+    docker run -d -p 1066:1066 -e TZ=Asia/Shanghai -e sender="by123@163.com" -e pwd="UNxxxxxxxxN" -e receiver="4dddqqq9dd6@qq.com"  -e adminpwd="123456" hanhongyong/ms365-e5-renew-x:pubemail
     
    - arm64v8版本：
 
