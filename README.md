@@ -54,7 +54,7 @@ https://t.me/ms365e5
 </details>
 
 <details>
-<summary><h3>Email通知功能(推荐)</h3></summary>
+<summary><h3>Email通知功能(推荐,20230402更新。)</h3></summary>
 
    - email通知版本主要实现了检测部署的账号是否全部都正常运行。该版本会每天定时发送邮件来通知是否账号全部运行。
    
