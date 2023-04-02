@@ -36,15 +36,7 @@ https://t.me/ms365e5
 
 <summary><h3> 部署步骤</h3></summary>
 
-1. 安装Docker环境后，下载MS365 E5 Renew X镜像。
-
-   ![image-20220211202818966](README.assets/image-20220211202818966.png)
-
-   ```
-   docker pull hanhongyong/ms365-e5-renew-x:latest
-   ```
-
-2. 运行MS365 E5 Renew X镜像，得到容器。
+1. 运行MS365 E5 Renew X镜像，得到容器。
 
 
    ```
@@ -55,7 +47,7 @@ https://t.me/ms365e5
       receiver = '789456@qq.com'为接收邮件的邮箱。其中pwd为发送邮箱的授权码。授权码获取方式为，进入网页版163邮箱，点击设置，点击POP3/SMTP/IMAP，点击授权密码管理，新增授权码即可。
       adminpwd为web界面的登录密码。
    
-3. 服务访问：输入ip:1066.
+2. 服务访问：输入ip:1066.
 
 ![image-20220211205438949](README.assets/image-20220211205438949.png)
 
