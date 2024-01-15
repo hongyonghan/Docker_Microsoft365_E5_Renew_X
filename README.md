@@ -72,18 +72,6 @@
 
 </details>
 
-
-
-## 通用版（20240115更新）
-
-增加了通用版本：这个版本支持了多种CPU架构，包括linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v5,linux/arm64/v7。
-
-这个版本后续不增加其他新的功能，需要手动去设置密码（版本太多，有些指令不同版本不一样），如果你有其他版本需求，欢迎发issue.
-
-```
-docker run -d -p 1066:1066 -e TZ=Asia/Shanghai --name ms365  hanhongyong/ms365-e5-renew-x:general
-```
-
 <details>
 <summary><h3>通用版（20240115更新）这个版本支持了多种CPU架构，包括linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v5,linux/arm64/v7。</h3></summary>
 
