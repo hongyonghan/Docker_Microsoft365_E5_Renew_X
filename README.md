@@ -7,22 +7,40 @@
 
 **本项目主要为学习Dockerfile和Docker的部署使用，禁止将此项目进行商业化，仅推荐学习使用。**
 
-**20230430更新，收到反馈，已经有部分同学的账号被强制关停。如果你是刚准备学习这个项目，我不推荐部署了（羊毛薅秃了）。如果你已经部署了，建议做好资料备份工作，随时准备下车！！！**
+【20240115更新】内测：更新了通用版本。支持了多种CPU架构，包括linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v5,linux/arm64/v7。
 
-** 交流群 ** 
-https://t.me/ms365e5
+【20230430更新】收到反馈，已经有部分同学的账号被强制关停。
+
+【20230402更新】增加了邮箱通知功能。
+
+## 支持版本
+
+|    CPU架构     | 是否支持 |
+| :------------: | :------: |
+|  linux/amd64   |    是    |
+|  linux/arm64   |    是    |
+|  linux/arm/v7  |    是    |
+|  linux/arm/v5  |    是    |
+|  Linux/arm v7  |    是    |
+| linux/arm64/v7 |          |
+
+
 
 **优点：**
 
 - 镜像小，仅仅225M，可以轻松部署在任何配置的服务器上，占用资源小
 - 部署方便，仅仅使用一行命令即可完成部署。
 - 可以邮件通知。
-- 等等。
+- 可以部署在多种服务器架构上等等。
 
 **你需要有：**
 
 - 有Docker的环境，了解Docker的基本命令（没有也没有关系，可以很快学会）。
 - 有一个服务器/群晖NAS等。
+
+
+
+
 
 
 
@@ -48,12 +66,26 @@ https://t.me/ms365e5
    修改-e后面的内容，其中 sender = '123456@163.com'为发送邮件的邮箱。
       receiver = '789456@qq.com'为接收邮件的邮箱。其中pwd为发送邮箱的授权码。授权码获取方式为，进入网页版163邮箱，点击设置，点击POP3/SMTP/IMAP，点击授权密码管理，新增授权码即可。
       adminpwd为web界面的登录密码。
-   
+
 2. 服务访问：输入ip:1066.
 
 ![image-20220211205438949](README.assets/image-20220211205438949.png)
 
 </details>
+
+
+
+## 通用版（20240115更新）
+
+增加了通用版本：这个版本支持了多种CPU架构，包括linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v5,linux/arm64/v7。
+
+这个版本后续不增加其他新的功能，需要手动去设置密码（版本太多，有些指令不同版本不一样），如果你有其他版本需求，欢迎发issue.
+
+```
+docker run -d -p 1066:1066 -e TZ=Asia/Shanghai --name ms365  hanhongyong/ms365-e5-renew-x:general
+```
+
+
 
 <details>
 <summary><h3>Email通知功能(推荐,20230402更新。)</h3></summary>
@@ -72,14 +104,14 @@ https://t.me/ms365e5
    
    - x86版本：
 
-    
+
     docker run -d -p 1066:1066 -e TZ=Asia/Shanghai -e sender="by123@163.com" -e pwd="UNxxxxxxxxN" -e receiver="4dddqqq9dd6@qq.com"  -e adminpwd="123456" hanhongyong/ms365-e5-renew-x:pubemail
-    
+
    - arm64v8版本：
 
-    
+
     docker run -d -p 1066:1066 -e TZ=Asia/Shanghai -e sender="byxxx@163.com" -e pwd="UxxxxWWN" -e receiver="41xxxxx@qq.com" -e adminpwd="123456" hanhongyong/ms365-e5-renew-x:arm64v8
-    
+
 
  </details>
 
