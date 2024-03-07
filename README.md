@@ -6,6 +6,7 @@
 
 
 **本项目主要为学习Dockerfile和Docker的部署使用，禁止将此项目进行商业化，仅推荐学习使用。**
+
 【20240307更新】修改密码的位置。密码的设置文件为容器中/app/Deploy目录下的Config.xml文件，修改内容为<LoginPassword>123456</LoginPassword>,将123456修改成自己的密码即可。
 
 【20240115更新】内测：更新了通用版本。支持了多种CPU架构，包括linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v5,linux/arm64/v7。
